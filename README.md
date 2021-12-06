@@ -1,2 +1,2 @@
-# ASL
-Assets Management Lawencon
+# LMS
+Lawencon Management System
