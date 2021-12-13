@@ -10,10 +10,10 @@ import com.lawencon.base.BaseEntity;
 @Table(name = "statuses_assets")
 public class StatusesAssets extends BaseEntity {
 
-	@Column(name = "statuses_assets_code", length = 5, nullable = false)
+	@Column(length = 5, nullable = false, unique = true)
 	private String statusesAssetsCode;
 
-	@Column(name = "statuses_assets_name", length = 15, nullable = false)
+	@Column(length = 15, nullable = false)
 	private String statusesAssetsName;
 
 	public String getStatusesAssetsCode() {
