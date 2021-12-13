@@ -16,9 +16,7 @@
 			<groupId>com.lawencon</groupId>
 			<artifactId>core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
-		
+		</dependency>		
 	</dependencies>
 
 </project>
