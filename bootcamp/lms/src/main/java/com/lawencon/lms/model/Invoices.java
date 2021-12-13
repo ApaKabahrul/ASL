@@ -13,16 +13,16 @@ import com.lawencon.base.BaseEntity;
 @Table(name = "invoices")
 public class Invoices extends BaseEntity {
 
-	@Column(name = "invoices_code", length = 10, nullable = false)
+	@Column(length = 10, nullable = false, unique = true )
 	private String invoicesCode;
 
-	@Column(name = "invoices_date", nullable = false)
+	@Column(nullable = false)
 	private LocalDateTime invoicesDate;
 
-	@Column(name = "store_name", length = 50, nullable = false)
+	@Column(length = 50, nullable = false)
 	private String storeName;
 
-	@Column(name = "price", nullable = false)
+	@Column(nullable = false)
 	private BigInteger price;
 
 	public String getInvoicesCode() {

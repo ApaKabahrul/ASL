@@ -10,16 +10,16 @@ import com.lawencon.base.BaseEntity;
 @Table(name = "companies")
 public class Companies extends BaseEntity {
 
-	@Column(name = "companies_code", length = 10, nullable = false)
+	@Column(length = 10, nullable = false, unique = true)
 	private String companiesCode;
 
-	@Column(name = "companies_name", length = 255, nullable = false)
+	@Column(length = 255, nullable = false)
 	private String companiesName;
 
-	@Column(name = "companies_phone", nullable = false)
+	@Column(nullable = false)
 	private String companiesPhone;
 
-	@Column(name = "companies_address", nullable = false)
+	@Column(nullable = false)
 	private String companiesAddress;
 
 	public String getCompaniesCode() {
