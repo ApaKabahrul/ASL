@@ -13,7 +13,7 @@ import com.lawencon.base.BaseEntity;
 @Table(name = "locations")
 public class Locations extends BaseEntity{
 	
-	@Column(name = "locations_code", length = 10, nullable = false)
+	@Column(name = "locations_code", length = 10, nullable = false, unique = true)
 	private String locationsCode;
 	
 	@Column(name = "locations_deploy", nullable = false)
@@ -21,7 +21,7 @@ public class Locations extends BaseEntity{
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "companies_id", nullable = false)
-	private Companies companies;
+	private Companies companiesId;
 
 	public String getLocationsCode() {
 		return locationsCode;
@@ -39,12 +39,12 @@ public class Locations extends BaseEntity{
 		this.locationsDeploy = locationsDeploy;
 	}
 
-	public Companies getCompanies() {
-		return companies;
+	public Companies getCompaniesId() {
+		return companiesId;
 	}
 
-	public void setCompanies(Companies companies) {
-		this.companies = companies;
+	public void setCompaniesId(Companies companiesId) {
+		this.companiesId = companiesId;
 	}
 
 }
